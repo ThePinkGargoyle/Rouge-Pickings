@@ -1,222 +1,407 @@
-/***BODY***/
-    font-family: "Montserrat";
-    color:#2b2b2b;
-    padding: 20px 45px 20px 0;
-    @font-face{
-        font-family: 'Wisdom Script';
-        src: url('../fonts/wisdom-script.otf') format('opentype');
-    }
-    
-    body {
-        font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-    }
-    
-    .container{
-        width: 1200px;
-        margin: 0 auto;
-    }
-    
-    h1,
-    h2,
-    h3,
-    h4 {
-        color: black;
-        text-transform: uppercase;
-        font-weight: 700;
-    }
-    h1 {
-        font-size: 30px;
-    }
-    h2 {
-        font-size: 24px;
-    }
-    h3 {
-        font-size: 18px;
-    }
-    h4 {
-        font-size: 12px;
-    }
-    
-    p {
-        font-size: 14px;
-        line-height: 21px;
-        padding: 0 30px;
-    }
-    
-    header {
-        height: 110px;
-        border-bottom: 3px solid #77a466;
-        margin: 0 auto;
-    }
-    
-    header h1 {
-        float: left;
-        margin: 0;
-        padding: 38px 0;
-    }
-    header h1 span {
-        color: #77a466;
-    }
-    
-    header nav {
-        float: right;
-        padding: 46px 0;
-    }
-    header nav ul {
-        margin: 0;
-        padding: 0;
-    }
-    header nav ul li {
-        text-transform: uppercase;
-        font-weight: 700;
-        font-size: 14px;
-        padding: 0 10px;
-        display: inline;
-    }
-    header nav ul li a{
-        text-decoration: none;
-        color:#77a466;
-    }
-    
-    .top-section,
-    .bottom-section {
-        margin: 0 auto;
-        clear: both;
-    }
-    
-    .main-image {
-        height: auto;
-        float: left;
-    }
-    .main-image img {
-        border-bottom: 3px solid #77a466;
-    }
-    
-    .main-title {
-        height: auto;
-        float: left;
-    }
-    .main-title h3 {
-        text-align: left;
-        padding: 5px 0;
-        color: #77a466;
-    }
-    .main-title p {
-        padding: 0;
-        font-size: 16px;
-        line-height: 25px;
-    }
-    
-    .section-one,
-    .section-two,
-    .section-three {
-        width: 399px;
-        height: auto;
-        float: left;
-        border-top: 1px solid #eee;
-    }
-    
-    .section-one h4 {
-        padding: 10px 0;
-    }
-    
-    .section-two {
-        border-left: 1px solid #eee;
-        border-right: 1px solid #eee;
-    }
-    
-    .section-two h4,
-    .section-three h4 {
-        padding: 10px 30px;
-    }
-    
-    .menu {
-        list-style: none;
-        padding: 0;
-    }
-    .menu li {
-        padding: 10px 0;
-        color:#77a466;
-    }
-    
-    .reviews {
-        color: #333;
-        font-size: 16px;
-        line-height: 21px;
-    }
-    
-    .address {
-        font-size: 16px;
-        line-height: 24px;
-    }
-    
-    footer {
-        height: 50px;
-        border-top: 3px solid #eee;
-        margin: 0 auto;
-        clear: both;
-        text-align: center;
-    }
-    footer span {
-        font-family: 'Wisdom Script', cursive;
-        text-transform: lowercase;
-        color: #77a466;
-        font-size: 14px;
-    }
-    
-/*****GRID*****/
-.full-width {
-    width: 1200px;
-    margin: 0 auto;
-}
-.half-width {
-    width: 600px;
-    float: left;
-}
-.third-width {
-    width: 400px;
-    float: left;
-}
+/*! HTML5 Boilerplate v5.2.0 | MIT License | https://html5boilerplate.com/ */
 
-/***HEADER***/
-h1{
-    font-size: 30px;
-    line-height: 23px;
-    font-family: "Montserrat";
-    font-weight: 700;
-    float: left;
-}
-rogue{
-    color: #77a466;
-}
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
 
-nav{
-    font-size: 14px;
-    line-height: 23px;
-    color: #77a466;
-    font-family: "Montserrat";
-    font-weight: 700;
-    float: right;
-}
-nav ul li{
-    display: inline-block;
-    
-/***MAIN***/
-.hero{}
-h2{}
-h3{}
-p{}
-
-/***CONTACT***/
-phone{}
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
  
-/***FOOTER***/
-footer{}
-
-/***RESPONSIVE CSS***/
-.wrapper{
-    min-width: 600px;
+   html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
 }
-.main-image{
-    resize: both;
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+    color: #fff;
+}
+
+.flex-container{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+}
+
+/* ----------- <header> <footer> ----------- */
+header, footer {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    word-spacing: .5rem;
+    letter-spacing: .1rem;
+}
+
+header ul {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .75rem;
+    display: flex wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    padding-bottom: 1.5rem;    
+}
+
+header ul li {
+    line-height: 2rem;
+}
+
+header ul li a{
+    text-decoration: none;
+    color:#77a466;
+}
+
+footer {
+    border-top: .1875rem  solid #eee;
+    margin-top: 1rem;
+}
+
+
+
+footer span {
+    font-family: 'Galada', cursive;
+    text-transform: lowercase;
+    color: #77a466;
+    font-size: 1.2rem;
+}
+
+/* ----------- <h1 to h3> Styles ----------- */
+h1,
+h2,
+h3,
+h4  {
+    color: black;
+    text-transform: uppercase;
+    font-weight: 700;
+    max-width: 90%;
+    margin: .1rem 0;
+    word-spacing: .1rem;
+    letter-spacing: .05rem;
+}
+
+h1 {
+    font-size: 1.3rem;
+    border-bottom: .3rem solid #77a466;
+    width: 90%;
+    text-align: center;
+}
+
+h1 span {
+    color: #77a466;
+}
+
+h2 {
+    font-size: 1rem;
+    color: #77a466;
+    text-align: left;
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: .785rem;
+    margin-top: 1rem;
+    text-align: left;
+}
+
+/* ----------- <main> styles ----------- */
+.main-image img {
+    width: 90%;
+    border-top: .1875rem solid #77a466;
+    border-bottom: .1875rem solid #77a466;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 0 auto;
+    margin-bottom: .5rem;
+}
+
+p {
+    width: 90%;
+    font-size: 1rem;
+    text-align: left;
+    margin: 0 auto;
+    line-height: 1.5rem;
+    color: #333;
+    word-spacing: .1rem;
+    letter-spacing: .05rem;
+}
+
+.flex-items {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-content: center;
+    border-top: .0625rem solid #eee;
+    width: 90%;
+}
+
+#div-1, #div-2, #div-3 {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-content: left;
+}
+
+.menu {
+    width: 90%;
+    margin: 0 auto;
+    list-style: none;
+}
+
+.menu li {
+    color:#77a466;
+    width: fit-content;
+    font-size: .95rem;
+    line-height: 2rem;
+}
+
+.reviews {
+    color: #333;
+    font-size: 1rem;
+    
+}
+
+.address {
+    font-size: 1rem;   
+}
+
+/* ----------- Tablets larger than 768px wide ----------- */
+@media (min-width:  768px) {
+    .flex-container {
+        flex-flow: row wrap;
+        align-items: flex-start;
+    }
+   
+    /* ----------- <header> <footer> ----------- */
+    header ul li {
+        font-size: 2em;
+        line-height: 2em;
+    }    
+
+    footer {
+        border-top: .0625rem solid #eee;
+        font-size: 2em;
+        width: 90%;
+        margin: 1.3rem auto;
+    }
+
+    footer span {
+        font-size: 1.3em;
+    }
+    
+    /* ----------- <h1 to h4> Styles ----------- */
+    h1 {
+        font-size: 3em;
+     }
+
+    h2 {
+        font-size: 1.9rem;
+        text-align: left;
+        margin-top: 1em;
+        border-bottom: .0625rem solid #77a466;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    /* ----------- <main> styles ----------- */
+    p {
+        font-size: 1.5em;
+        line-height: 2em;
+        word-spacing: .5rem;
+        letter-spacing: .1rem; 
+    }
+
+    main p {
+        width: 90%;
+        padding-bottom: 1.3rem;
+        border-bottom: .0625rem solid #eee;
+    }
+
+    .flex-items {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #div-1, #div-2, #div-3 {
+        width: 30%;
+        margin: 0 0;
+    }
+
+    #div-1 {
+        margin-left: 3%;
+    }
+
+    #div-2, #div-3 {
+        letter-spacing: 0;
+        word-spacing: 0;
+    }
+
+    #div-2 p, #div-3 p {
+        font-size: 1em;
+    }
+
+    #div-2 {
+        border-left: .0625rem solid #eee;
+        border-right: .0625rem solid #eee;
+        padding: 0 1rem;
+    }
+
+    .menu li {
+        font-size: 1.6em;
+        line-height: 2em;
+    }
+}
+
+/* ----------- Monitors larger than 1200px wide ----------- */
+@media (min-width: 1200px) {
+    /* ----------- <header> ----------- */
+    header {
+        width: 93.5%;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 3em auto;
+    }
+
+    header ul {
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-end;
+        padding-bottom: 0; 
+        letter-spacing: 0; 
+    }
+    
+    header ul li {
+        line-height: normal;
+        letter-spacing: normal;
+        font-size: 1.2em;
+    }
+
+    footer {
+        margin-top: .5em;
+        padding-top: .5em;
+    }
+
+    /* ----------- <h1 to h4> Styles ----------- */
+    h1 {
+        width: 35%;
+        border-bottom: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        font-size: 3em;
+        letter-spacing: normal;
+    }
 }
